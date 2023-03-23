@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, TextField, Typography, Button, styled } from '@mui/material';
 import {Link} from 'react-router-dom';
-import { createMuiTheme, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 const Logo = styled(Typography)`
 margin:20px auto 10px auto;
@@ -26,7 +26,7 @@ const SignUpWrapper = styled(Box)`
 margin:15px 0;
  `;
 const Container = styled(Box)`
-width:350px;
+width:380px;
 // margin-top:10px;
 margin-left:auto;
 margin-right:auto;
@@ -70,7 +70,7 @@ border:"2px solid #dfdfdf",
 BorderRadius:2,
 padding:'25px 0',
 margin:'10px 0',
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('sm')]:{
         position:'relative',
         bottom:-160,
     }
@@ -90,7 +90,7 @@ color:#1895f6;
 `;
 const SignUp = () => {
 
-    const theme = createMuiTheme({
+    const theme = createTheme({
         Typography: { fontFamily: ['Handlee', 'cursive'].join(','), }
     });
 
@@ -119,7 +119,7 @@ const SignUp = () => {
                 </SignUpCard>
                 <NoAccount>
                     <Typography style ={{fontSize:'12px'}}>Have an account?&nbsp;
-                        <Login>Log in</Login> </Typography>
+                        <Login to = '/'>Log in</Login> </Typography>
                 </NoAccount>
             </Container>
         </SignUpWrapper>

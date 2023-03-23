@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box, TextField, Typography,Divider ,Button, styled } from '@mui/material';
-import {Link} from 'react-router-dom';
+import { Box, TextField, Typography, Divider, Button, styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
 
 const Logo = styled(Typography)`
@@ -25,20 +25,20 @@ text-align: center;
 margin:15px;
 `;
 const SignUpWrapper = styled(Box)
-(({theme})=>({
- display:'flex',
- alignItem: 'center',
- justifyContent:'center',
- flexDirection: 'column',
- flexShrink: 0,
- padding: '10px 0',
- verticalAlign: 'baseline',
+    (({ theme }) => ({
+        display: 'flex',
+        alignItem: 'center', marginTop: '5%',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        flexShrink: 0,
+        padding: '10px 0',
+        verticalAlign: 'baseline',
 
- [theme.breakpoints.down('sm')]:{
-  marginTop:'30%',
-}
-}))
-;
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '10%',
+        }
+    }))
+    ;
 const Container = styled(Box)`
 width:380px;
 // margin-top:10px;
@@ -77,21 +77,21 @@ border-radius:8px;
 background:#0095f6
 `;
 const NoAccount = styled(Box)
-(({theme})=>({
-textAlign:'center',
- width:'100%',
-border:"2px solid #dfdfdf",
-BorderRadius:2,
-padding:'15px 0',
-margin:'10px 0',
-    [theme.breakpoints.down('sm')]:{
-        position:'relative',
-        bottom:-140,
-    }
-  }))
-  ;
+    (({ theme }) => ({
+        textAlign: 'center',
+        width: '100%',
+        border: "2px solid #dfdfdf",
+        BorderRadius: 2,
+        padding: '15px 0',
+        margin: '10px 0',
+        [theme.breakpoints.down('sm')]: {
+            position: 'relative',
+            bottom: -140,
+        }
+    }))
+    ;
 
- 
+
 const Text = styled(Typography)`
  font-size: 12px;
  font-weight: 400;
@@ -118,23 +118,17 @@ const ForgotPassword = () => {
                     </ThemeProvider>
                     <Subtitle>Trouble with logging in?</Subtitle>
                     <Wrapper>
-                    <Solution>Enter your email address, phone number or username, and we'll send you a link to get back into your account.</Solution>
-                   
+                        <Solution>Enter your email address, phone number or username, and we'll send you a link to get back into your account.</Solution>
                         <TextArea placeholder='Mobile Number Or email address' />
                         <StyledButton variant='contained'>Sign Up</StyledButton>
-
-                        <Text>can't reset your Password?</Text><br/>
-                        <Divider/>
-
-                        <Typography style={{color:'#8e8e8e',fontSize:'16px'}}>OR</Typography>
-                      
-
-                        <Typography ><Login>Create New Account</Login> </Typography>
+                        <Text>can't reset your Password?</Text><br />
+                        <Divider />
+                        <Typography style={{ color: '#8e8e8e', fontSize: '16px' }}>OR</Typography>
+                        <Typography ><Login to='/signup'>Create New Account</Login> </Typography>
                     </Wrapper>
-                    
                 </SignUpCard>
                 <NoAccount>
-                    <Typography ><Login>Back to Login</Login> </Typography>
+                    <Typography ><Login to='/'>Back to Login</Login> </Typography>
                 </NoAccount>
             </Container>
         </SignUpWrapper>

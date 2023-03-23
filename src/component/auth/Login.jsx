@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, TextField, Typography, Button, styled } from '@mui/material';
-import {Link} from 'react-router-dom';
-import { createMuiTheme, ThemeProvider } from '@mui/material';
+import {Link,useNavigate} from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 const Logo = styled(Typography)`
 margin:20px auto 10px auto;
@@ -27,7 +27,7 @@ const SignUpWrapper = styled(Box)
 ;
 
 const Container = styled(Box)`
-width:350px;
+width:380px;
 margin-top:10px;
 margin-left:auto;
 margin-right:auto;
@@ -79,8 +79,9 @@ margin:'10px 0',
   ;
 
  
-const Text = styled(Typography)`
- font-size: 12px;
+const Text = styled(Link)`
+text-decoration:none; 
+font-size: 12px;
  font-weight: 400;
  color:#8e8e8e;
  margin-top:15px;
@@ -91,10 +92,17 @@ color:#1895f6;
 `;
 const Login = () => {
 
-    const theme = createMuiTheme({
+    const navigate = useNavigate();
+
+    const theme = createTheme({
         Typography: { fontFamily: ['Handlee', 'cursive'].join(','), }
     });
 
+    const goToFeed =()=>{
+        console.log('yaha tak tho aa gya')
+        navigate('/feed');
+      };
+    
 
     return (
         <SignUpWrapper>
@@ -106,14 +114,14 @@ const Login = () => {
                     <Wrapper>
                         <TextArea placeholder='username Or email address' />
                         <TextArea placeholder='Password' />
-                        <StyledButton variant='contained'>Log In</StyledButton>
-                        <Text>Forgotten your password?</Text>
+                        <StyledButton variant='contained' onClick = {goToFeed} >Log In</StyledButton>
+                        <Text to='/forgot'>Forgotten your password?</Text>
                     </Wrapper>
                    
                 </SignUpCard>
                 <NoAccount>
                     <Typography style ={{fontSize:'12px'}}> don't Have an account?&nbsp;
-                        <SignUp>Sign Up</SignUp> </Typography>
+                        <SignUp to='/signup'>Sign Up</SignUp> </Typography>
                 </NoAccount>
             </Container>
         </SignUpWrapper>
