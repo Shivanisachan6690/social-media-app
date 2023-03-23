@@ -10,6 +10,7 @@ display:flex;
 const Sidebar = styled(Box)`
 wtdth:100%;
 `;
+
 const Navigation = styled(Box)
 (({theme})=>({
     height:'90vh',
