@@ -8,13 +8,22 @@ import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
-export const categories = [
-    { name: 'Home', icon: <HomeIcon />, },
-    { name: 'Search', icon: <SearchIcon />, },
-    { name: 'Explore', icon: <ExploreOutlinedIcon />, },
-    { name: 'Reels', icon: <PlayCircleOutlinedIcon />, },
-    { name: 'Messages', icon: <MapsUgcOutlinedIcon /> },
-    { name: 'Notification', icon: <FavoriteBorderIcon />, },
-    { name: 'Create', icon: <AddBoxOutlinedIcon /> },
-    { name: 'Profile', icon: <AccountCircleIcon /> },
-];
+// export const categories = [
+//     { name: 'Home', icon: <HomeIcon />, },
+//     { name: 'Search', icon: <SearchIcon />, },
+//     { name: 'Explore', icon: <ExploreOutlinedIcon />, },
+//     { name: 'Reels', icon: <PlayCircleOutlinedIcon />, },
+//     { name: 'Messages', icon: <MapsUgcOutlinedIcon /> },
+//     { name: 'Notification', icon: <FavoriteBorderIcon />, },
+//     { name: 'Create', icon: <AddBoxOutlinedIcon /> },
+//     { name: 'Profile', icon: <AccountCircleIcon /> },
+// ];
+
+export const n1=<HomeIcon />
+export const n2=<SearchIcon />
+export const n3=<ExploreOutlinedIcon />
+export const n4=<PlayCircleOutlinedIcon />
+export const n5=<MapsUgcOutlinedIcon />
+export const n6=<FavoriteBorderIcon />
+export const n7=<AddBoxOutlinedIcon />
+export const n8=<AccountCircleIcon />

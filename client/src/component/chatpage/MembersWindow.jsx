@@ -6,4 +6,4 @@ const MembersWindow = () => {
   )
 }
 
-export default MembersWindow
+export default MembersWindow;
