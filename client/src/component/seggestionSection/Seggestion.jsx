@@ -2,7 +2,7 @@ import React from 'react'
 
 const Seggestion = () => {
   return (
-    <div>Seggestion</div>
+    <div>Seggestion hello</div>
   )
 }
 
